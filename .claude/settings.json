@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create *)",
+      "Bash(npx --yes create-vite@latest temp-scaffold --template react)",
+      "Bash(rm -rf src/assets)",
+      "Bash(mkdir -p src/config src/components/layout src/components/ui src/components/sections src/hooks)",
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:5173/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5173/)",
+      "Bash(npx --yes chromium-cli --help)",
+      "Bash(npm ls *)",
+      "Bash(node -e \"require\\('playwright'\\)\")",
+      "Bash(npm uninstall *)",
+      "Bash(mkdir -p \"/c/Users/murig/AppData/Local/Temp/claude/c--Users-murig-OneDrive-Desktop-Nyarado-TV-Website/bc943f4a-5266-447e-8256-871e09d608d2/scratchpad/pw-check\")",
+      "Bash(npm init *)",
+      "Bash(npx playwright *)",
+      "Bash(node shot.mjs)"
+    ]
+  }
+}
