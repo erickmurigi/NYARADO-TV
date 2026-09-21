@@ -65,20 +65,37 @@ export const services = [
   },
 ];
 
-// PLACEHOLDER — replace with real portfolio thumbnails / video embeds.
-// `videoUrl` can point to a YouTube/Vimeo embed URL or a hosted MP4 later.
+// PLACEHOLDER — these are royalty-free Unsplash stock photos (files in
+// public/images/), standing in until Nyarado TV supplies its own work.
+// To replace one, drop a new file with the same name into public/images/, or
+// point `thumbnail` at a different path. Titles are deliberately generic so
+// nothing claims to be a real client. `videoUrl` can point to a YouTube/Vimeo
+// embed URL or a hosted MP4 later.
+export const heroImage = {
+  src: "/images/hero.webp",
+  alt: "A bride and groom sharing a tender kiss in a garden on their wedding day",
+};
+
 export const portfolioItems = [
-  { id: 1, title: "Amara & Kevin", category: "Weddings", timecode: "00:03:42:10", videoUrl: null },
-  { id: 2, title: "The Otieno Family Reunion", category: "Birthdays", timecode: "00:02:15:04", videoUrl: null },
-  { id: 3, title: "Safaricom Devs Summit", category: "Corporate", timecode: "00:04:58:21", videoUrl: null },
-  { id: 4, title: "Wanjiru's 50th", category: "Birthdays", timecode: "00:01:47:12", videoUrl: null },
-  { id: 5, title: "Njoroge & Faith", category: "Weddings", timecode: "00:05:03:08", videoUrl: null },
-  { id: 6, title: "Karibu Community Fair", category: "Corporate", timecode: "00:03:21:17", videoUrl: null },
-  { id: 7, title: "Achieng & David", category: "Weddings", timecode: "00:04:11:02", videoUrl: null },
-  { id: 8, title: "Baby Zawadi's Send-Off", category: "Birthdays", timecode: "00:02:39:19", videoUrl: null },
+  { id: 1, title: "Garden Wedding Highlights", category: "Weddings", timecode: "00:03:42:10", thumbnail: "/images/wedding-1.webp", alt: "A groom kissing his bride on the cheek in a garden", videoUrl: null },
+  { id: 2, title: "Little Violinist's Birthday", category: "Birthdays", timecode: "00:02:15:04", thumbnail: "/images/birthday-1.webp", alt: "A young girl in a yellow dress playing a violin in front of a Happy Birthday neon sign", videoUrl: null },
+  { id: 3, title: "Investment Panel Recap", category: "Corporate", timecode: "00:04:58:21", thumbnail: "/images/corporate-1.webp", alt: "Speakers seated at a panel discussion during a conference", videoUrl: null },
+  { id: 4, title: "Traditional Wedding Film", category: "Weddings", timecode: "00:01:47:12", thumbnail: "/images/wedding-3.webp", alt: "A couple in gold traditional attire laughing together", videoUrl: null },
+  { id: 5, title: "Birthday Cake Surprise", category: "Birthdays", timecode: "00:05:03:08", thumbnail: "/images/birthday-2.webp", alt: "A woman laughing as friends smear cake on her face at a birthday party", videoUrl: null },
+  { id: 6, title: "Cultural Festival Dance", category: "Community", timecode: "00:03:21:17", thumbnail: "/images/community-1.webp", alt: "A dancer in colourful traditional dress at an outdoor cultural festival", videoUrl: null },
+  { id: 7, title: "Boardroom Strategy Session", category: "Corporate", timecode: "00:03:14:09", thumbnail: "/images/corporate-4.webp", alt: "A team of professionals seated around a boardroom table with laptops", videoUrl: null },
+  { id: 8, title: "Wedding Portrait Session", category: "Weddings", timecode: "00:04:11:02", thumbnail: "/images/wedding-2.webp", alt: "A groom kissing his bride's hand on a wooden staircase", videoUrl: null },
+  { id: 9, title: "Executive Portrait Session", category: "Corporate", timecode: "00:01:36:20", thumbnail: "/images/corporate-6.webp", alt: "A man in a blue suit and tie posing for a professional portrait", videoUrl: null },
+  { id: 10, title: "Graduation Day Celebration", category: "Birthdays", timecode: "00:01:58:06", thumbnail: "/images/birthday-3.webp", alt: "Young children holding Love and Unity signs at a graduation celebration", videoUrl: null },
+  { id: 11, title: "Match Day Fan Zone", category: "Community", timecode: "00:03:05:23", thumbnail: "/images/community-2.webp", alt: "Cheering fans holding a Kenyan flag in a stadium", videoUrl: null },
+  { id: 12, title: "Bridal Party Entrance", category: "Weddings", timecode: "00:05:27:14", thumbnail: "/images/wedding-4.webp", alt: "A groomsman dancing ahead of the bridal party at an outdoor wedding", videoUrl: null },
+  { id: 13, title: "Annual Gala Dinner", category: "Corporate", timecode: "00:02:39:19", thumbnail: "/images/corporate-2.webp", alt: "A man in a black hat and glasses seated at a gala dinner table", videoUrl: null },
+  { id: 14, title: "Heritage Day Celebration", category: "Community", timecode: "00:04:22:03", thumbnail: "/images/community-3.webp", alt: "Women in red traditional dress smiling and singing at a cultural ceremony", videoUrl: null },
+  { id: 15, title: "Proud Family Celebration", category: "Birthdays", timecode: "00:02:08:15", thumbnail: "/images/birthday-4.webp", alt: "A smiling girl in a white dress holding a certificate between her parents in front of a balloon arch", videoUrl: null },
+  { id: 16, title: "Conference Networking Night", category: "Corporate", timecode: "00:02:52:11", thumbnail: "/images/corporate-3.webp", alt: "Two smiling attendees at a networking event", videoUrl: null },
 ];
 
-export const portfolioFilters = ["All", "Weddings", "Birthdays", "Corporate"];
+export const portfolioFilters = ["All", "Weddings", "Birthdays", "Corporate", "Community"];
 
 // PLACEHOLDER — sample rates only, confirm real pricing before launch
 export const pricingTiers = [

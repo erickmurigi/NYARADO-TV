@@ -1,4 +1,4 @@
-import { business } from "../../config/siteContent";
+import { business, heroImage } from "../../config/siteContent";
 import RecIndicator from "../ui/RecIndicator";
 import Icon from "../ui/Icon";
 
@@ -55,12 +55,27 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Viewfinder-style placeholder frame for a hero reel/photo */}
+        {/* Viewfinder-style frame for the hero photo/reel (see `heroImage`) */}
         <div className="relative aspect-[4/5] lg:aspect-[3/4] w-full max-w-md mx-auto lg:max-w-none">
           <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-plum-700 via-plum-800 to-plum-950 border border-cream-100/10 overflow-hidden">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-20 h-20 rounded-full bg-cream-50/10 backdrop-blur-sm flex items-center justify-center border border-cream-100/20">
-                <Icon name="play" className="w-8 h-8 text-cream-50 ml-1" />
+            {heroImage?.src && (
+              <>
+                <img
+                  src={heroImage.src}
+                  alt={heroImage.alt}
+                  fetchPriority="high"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 bg-gradient-to-t from-plum-950/70 via-plum-950/10 to-plum-950/30"
+                />
+              </>
+            )}
+            {/* Sits low in the frame so it never covers the photo's subjects */}
+            <div className="absolute inset-x-0 bottom-14 flex justify-center">
+              <div className="w-16 h-16 rounded-full bg-cream-50/15 backdrop-blur-sm flex items-center justify-center border border-cream-100/30">
+                <Icon name="play" className="w-7 h-7 text-cream-50 ml-1" />
               </div>
             </div>
             <div className="absolute top-5 left-5 flex items-center gap-2">

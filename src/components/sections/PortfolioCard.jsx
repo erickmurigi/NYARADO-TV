@@ -8,11 +8,23 @@ const corners = [
 ];
 
 export default function PortfolioCard({ item }) {
-  // PLACEHOLDER frame — swap for a real <img>/<video> once `item.videoUrl`
-  // or a thumbnail path is supplied in src/config/siteContent.js
+  // Shows `item.thumbnail` when provided; otherwise falls back to the plain
+  // gradient frame. Set both in src/config/siteContent.js.
   return (
     <div className="group relative aspect-[4/5] rounded-xl overflow-hidden bg-gradient-to-br from-plum-800 to-plum-950 cursor-pointer">
-      <div className="absolute inset-0 flex items-center justify-center opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+      {item.thumbnail && (
+        <img
+          src={item.thumbnail}
+          alt={item.alt ?? item.title}
+          loading="lazy"
+          className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+        />
+      )}
+      {item.thumbnail && (
+        <div aria-hidden="true" className="absolute inset-0 bg-plum-950/25 group-hover:bg-plum-950/10 transition-colors duration-500" />
+      )}
+
+      <div className="absolute inset-0 flex items-center justify-center opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
         <div className="w-14 h-14 rounded-full bg-cream-50/10 backdrop-blur-sm flex items-center justify-center border border-cream-100/20">
           <Icon name="play" className="w-6 h-6 text-cream-50 ml-0.5" />
         </div>

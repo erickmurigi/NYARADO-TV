@@ -40,14 +40,18 @@ Edit that file and the whole site updates — no need to touch components.
 
 ### Swapping in real portfolio media
 
-Each entry in `portfolioItems` currently renders as a styled placeholder
-frame (`src/components/sections/PortfolioCard.jsx`). To use real media:
+The hero photo and portfolio thumbnails are currently **royalty-free Unsplash
+stock photos** (in `public/images/`), used as placeholders because the client
+has no samples yet. Portfolio titles are generic on purpose. To swap in real
+work:
 
-1. Add a thumbnail image or hosted video URL to the relevant item in
-   `portfolioItems` (e.g. add a `thumbnail` or `videoUrl` field).
-2. In `PortfolioCard.jsx`, replace the placeholder `<div>` block with an
-   `<img>` (lazy-loaded via `loading="lazy"`) or a `<video>`/embed using
-   that field.
+1. Save the new image over the existing file in `public/images/` (same name),
+   or point `thumbnail` / `heroImage.src` in `siteContent.js` at a new path.
+   Portfolio cards are 4:5 portrait and the hero is 3:4 — export at
+   ~800×1000 / ~900×1200 as WebP or JPG to keep the page fast.
+2. Update `title`, `category` and `alt` for each item to describe the real
+   project. If `thumbnail` is left out, the card falls back to a plain frame.
+3. Optional: add a `videoUrl` and wire it up in `PortfolioCard.jsx`.
 
 ### Contact form behavior
 
